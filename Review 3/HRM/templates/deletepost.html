@@ -1,0 +1,49 @@
+<html>
+<head>
+<body bgcolor="#f5deb3">
+<table>
+    <tr><td  bgcolor="#daa520" style="width: 1400px"><h1><marquee>HR OPERATION MANAGEMENT</marquee></h1></td></tr>
+</table>
+<table>
+    <tr align="center"><td style="width: 1400px"><h3 style="color: red">DELETE PAGE</h3></td></tr>
+</table>
+<form action="/deletepost/" method="post">
+  {% csrf_token %}
+<table align="center" border="0">
+    <tr>
+        <th></th>
+        <th>OPPERTUNITY CODE</th>
+        <th>QUALIFICATION</th>
+        <th>REGISTRATION START FROM</th>
+        <th>AGE LIMIT</th>
+        <th>LAST DATE TO APPLY</th>
+        <th>DEPARTMENT ID</th>
+        <th>NO OF POSITION</th>
+        <th>DESCRIPTION</th>
+        <th>RESPONSIBILITIES</th>
+        <th>CONTACT NO</th>
+
+    </tr>
+    {% for x in data  %}
+    <tr>
+        <th><input type="checkbox" name="t1"  value="{{ x.oppcode }}" readonly></th>
+        <th><input type="number" value="{{ x.oppcode }}" name="t1" readonly></th>
+        <th><input type="text" value="{{ x.qualification }}" readonly></th>
+        <th><input type="date" value="{{ x.startregistration }}" readonly></th>
+    <th><input type="number" value="{{ x.age}}" readonly></th>
+    <th><input type="date" value="{{ x.lastregistration}}"readonly></th>
+    <th><input type="number" value="{{ x.deptid }}"readonly></th>
+    <th><input type="number" value="{{ x.position }}"readonly></th>
+    <th><input type="text" value="{{ x.description }}"readonly></th>
+    <th><input type="text" value="{{ x.responsibilities }}"readonly></th>
+    <th><input type="number" value="{{ x.cno }}"readonly></th>
+    </tr>
+    {% endfor %}
+     <tr><th colspan="6"><input type="submit" value="DELETE"></th></tr>
+</table>
+{{ msg }}
+</form>
+
+</body>
+</head>
+</html>

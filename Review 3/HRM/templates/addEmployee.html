@@ -1,0 +1,37 @@
+<html>
+<head>
+<body bgcolor="#f5deb3">
+<table>
+    <tr><td  bgcolor="#daa520" style="width: 1400px"><h1><marquee>HR OPERATION MANAGEMENT</marquee></h1></td></tr>
+</table>
+<table align="center">
+   <h3 align="center" style="color: red">ADD EMPLOYEES PAGE</h3></table>
+
+<table align="center">
+    <form action="/employeecreate/" method="post">
+    {% csrf_token %}
+{#     <tr><th></th><th><input type="hidden" name="idno" readonly></th></tr>#}
+    <tr><th>EMPLOYEENAME:</th><th><input type="text" name="name" required></th></tr>
+    <tr><th>PASSWORD:</th><th><input type="password" name="password" required></th></tr>
+    <tr><th>DESIGNATION:</th><th>
+        <select name="designation" required>
+            <option>select</option>
+            <option>MANAGER</option>
+            <option>HRHEAD</option>
+            <option>INTERVIWER</option>
+            <option>EMPLOYEE</option>
+        </select></th></tr>
+    <tr><th>ADDRESS:</th><th><input type="text" name="address" required></th></tr>
+    <tr><th>CONTACTNO:</th><th><input type="number" name="cno" required></th></tr>
+    <tr><th>EMAIL:</th><th><input type="email" name="email" required></th></tr>
+        <tr><th></th><th><input type="submit" value="SUBMIT"></th></tr>
+    </form>
+{#    <form>#}
+{#    <th><input type="submit" value="clear"></th></tr>#}
+{#    </form>#}
+</table>
+ <h3 style="color: red">{{ msg }}</h3>
+
+</body>
+</head>
+</html>

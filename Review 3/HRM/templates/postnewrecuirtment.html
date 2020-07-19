@@ -1,0 +1,42 @@
+<html>
+<head>
+<body bgcolor="#f5deb3">
+<table>
+    <tr><td  bgcolor="#daa520" style="width: 1400px"><h1><marquee>HR OPERATION MANAGEMENT</marquee></h1></td></tr>
+</table>
+<table>
+    <tr align="center"><td style="width:1400px"><h2 style="color:red">POSTING NEW RECUIRTMENT DETAILS</h2></td></tr>
+</table>
+<table align="center">
+    <form action="/saverec/" method="post">
+        {% csrf_token %}
+    <h2 align="center">Adding a new recuirtment details</h2>
+    <tr><td>OPPERTUNITY CODE</td><td><input type="number" name="t1" required></td></tr>
+    <tr><td>QUALIFICATION</td><td><input type="text" name="t2" required></td></tr>
+    <tr><td>REGISTARTIONS START FROM</td><td><input type="date" name="t3" required></td></tr>
+    <tr><td>AGE LIMIT</td><td><input type="number" name="t4" min="23" max="40" required></td></tr>
+    <tr><td>LAST DATE TO APPLY</td><td><input type="date" name="t5" required></td></tr>
+    <tr><td>DEPARTMENT ID</td><td> <select name="t6" required>
+            <option>department</option>
+            <option>man2222</option>
+            <option>man1111</option>
+            <option>man3035</option>
+        </select></td></tr>
+    <tr><td>NO OF POSITION</td><td><input type="number" name="t7" required></td></tr>
+    <tr><td>DESCRIPTION</td><td><input type="text" name="t8" required></td></tr>
+    <tr><td>RESPONSIBILITIES</td><td><input type="text" name="t9" required></td></tr>
+    <tr><td>CONTACT NO</td><td><input type="number" name="t10" required></td></tr>
+    <tr><td></td><td><input type="submit" value="ADD" required></td></tr>
+
+
+
+
+    </form>
+
+</table>
+
+<h3>{{ msg }}</h3>
+
+</body>
+</head>
+</html>

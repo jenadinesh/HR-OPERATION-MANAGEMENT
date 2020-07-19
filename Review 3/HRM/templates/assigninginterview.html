@@ -1,0 +1,35 @@
+<html>
+<head>
+<body bgcolor="#f5deb3">
+<table>
+    <tr><td  bgcolor="#daa520" style="width: 1400px"><h1><marquee>HR OPERATION MANAGEMENT</marquee></h1></td></tr>
+</table>
+   <tr><h2 style="color: red">INTERVIEW SCHEDULE PAGE</h2></tr>
+<table align="center">
+    <tr><th colspan="2">ASSIGN AN INTERVIEW FOR AN APPLICANT</th></tr></table>
+
+<form action="/schedule/" method="post">
+   {% csrf_token %}
+<table align="center">
+
+{% for x in data %}
+    <tr><td> Applicant ID:<input type="number" name="id1" value="{{ x.id }}" required readonly></td></tr><br>
+     <tr> <td>Select Emp Id:<select name="id2">
+    {% for y in res %}
+
+     <option value="{{ y.employeeid }}">{{ y.employeeid }}</option>
+        {% endfor %}
+        </select></td>
+
+
+    </tr>
+<br>
+    <tr><td>Schedule Date:<input type="date" name="d1" required></td></tr><br>
+     <tr><td><button type="submit">ADD TO INTERVIEW SCHEDULE</button></td></tr>
+{% endfor %}
+</table>
+{{ msg }}
+</form>
+</body>
+</head>
+</html>

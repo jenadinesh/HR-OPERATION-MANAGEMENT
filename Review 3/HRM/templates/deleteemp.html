@@ -1,0 +1,40 @@
+<html>
+<head>
+<body bgcolor="#f5deb3">
+<table>
+    <tr><td  bgcolor="#daa520" style="width: 1400px"><h1><marquee>HR OPERATION MANAGEMENT</marquee></h1></td></tr>
+</table>
+<table>
+    <tr align="center"><td style="width: 1400px"><h3 style="color: red">DELETE PAGE</h3></td></tr>
+</table>
+<form action="/delete/" method="post">
+  {% csrf_token %}
+<table align="center" border="0">
+    <tr>
+        <th></th>
+        <th>EMPLOYEEID</th>
+        <th>EMPLOYEENAME</th>
+        <th>DESIGNATION</th>
+        <th>ADDRESS</th>
+        <th>CONTACT</th>
+        <th>EMAIL</th>
+    </tr>
+    {% for x in data  %}
+    <tr>
+        <th><input type="checkbox" name="t1"  value="{{ x.employeeid }}" readonly></th>
+        <th><input type="number" value="{{ x.employeeid }}" name="idno" readonly></th>
+        <th><input type="text" value="{{ x.name }}" readonly></th>
+        <th><input type="text" value="{{ x.designation }}" readonly></th>
+    <th><input type="text" value="{{ x.address }}" readonly></th>
+    <th><input type="number" value="{{ x.cno }}"readonly></th>
+    <th><input type="email" value="{{ x.email }}"readonly></th>
+    </tr>
+    {% endfor %}
+     <tr><th colspan="6"><input type="submit" value="DELETE"></th></tr>
+</table>
+{{ msg }}
+</form>
+
+</body>
+</head>
+</html>

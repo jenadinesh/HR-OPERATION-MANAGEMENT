@@ -1,0 +1,35 @@
+<body bgcolor="#f5deb3">
+<table>
+    <tr><td  bgcolor="#daa520" style="width: 1400px"><h1><marquee>HR OPERATION MANAGEMENT</marquee></h1></td></tr>
+</table>
+   <tr><h2 style="color: red">INTERVIEW SCHEDULE PAGE</h2></tr>
+<table align="center">
+    <tr><th colspan="2">ASSIGN AN INTERVIEW FOR AN APPLICANT</th></tr></table>
+
+<form action="/setinterview/" method="post">
+   {% csrf_token %}
+<table align="center">
+
+{% for x in data %}
+
+    <tr><td> Interview ID:</td><td><input type="number" name="id1" value="{{ x.id }}" required readonly></td></tr>
+     <tr><td>Interviewer:</td><td><input type="number" name="id2" value="{{ x.empid }}" required readonly></td></tr>
+    <tr><td>SCHEDULE_TIMESTAMP</td><td><input type="text" name="id3" value="{{ x.date }}" required readonly></td></tr>
+    <tr><td>Applicant Id:</td><td><input type="number" name="id4"  value="{{ x.idno }}" required></td></tr>
+
+     <tr><td>RESULT:</td><td><select name="id5">
+         <option>selected</option>
+         <option>Rejected</option>
+     </select>
+     </td></tr>
+     <tr><td colspan="4"><button type="submit">ADD TO INTERVIEW SCHEDULE</button></td></tr>
+{% endfor %}
+
+
+</table>
+<table><tr><td><a href="{% url 'index' %}" style="text-decoration: none;color:red">LOGOUT</a></td></tr></table>
+{{ msg }}
+</form>
+</body>
+</head>
+</html>

@@ -1,0 +1,30 @@
+<html>
+<head>
+<body bgcolor="#f5deb3">
+<table>
+    <tr><td  bgcolor="#daa520" style="width: 1400px"><h1><marquee>HR OPERATION MANAGEMENT</marquee></h1></td></tr>
+</table>
+   <tr><h2 style="color: red">INTERVIEWER HOME PAGE</h2></tr>
+<table align="center">
+          <tr><th colspan="2">GET AN APPLICANT TO FINALISE INTERVIEW RESULT</th></tr><br></table><br><br>
+<form action="/getid/" method="post">
+    {% csrf_token %}
+<table align="center">
+
+          <tr><th>SELECT AN APPLICANT ID</th>
+
+              <th> <select name="id1">
+                  {% for x in data2 %}
+                  <option value="{{ x.id }}"> {{ x.id }}</option>
+              {% endfor %}
+              </select>
+              </th>
+
+          </tr>
+          <tr><th><input type="submit" value="Getdetails"></th></tr>
+</table>
+    {{ msg }}
+    </form>
+</body>
+</head>
+</html>

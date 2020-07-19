@@ -1,0 +1,34 @@
+<html>
+<head>
+<body bgcolor="#f5deb3">
+<table>
+    <tr><td  bgcolor="#daa520" style="width: 1400px"><h1><marquee>HR OPERATION MANAGEMENT</marquee></h1></td></tr>
+</table>
+<table>
+    <tr align="center"><td style="width: 1400px"><h3 style="color: red">VIEW EMPLOYEE DETAILS</h3></td></tr>
+</table>
+
+<table align="center" border="2">
+    <tr>
+        <th>EMPLOYEEID</th>
+        <th>EMPLOYEENAME</th>
+        <th>DESIGNATION</th>
+        <th>ADDRESS</th>
+        <th>CONTACT</th>
+        <th>EMAIL</th>
+    </tr>
+    {% for x in data  %}
+    <tr>
+        <th><input type="number" value="{{ x.employeeid }}" readonly></th>
+        <th><input type="text" value="{{ x.name }}" readonly></th>
+        <th><input type="designation" value="{{ x.designation }}" readonly></th>
+    <th><input type="text" value="{{ x.address }}" readonly></th>
+    <th><input type="number" value="{{ x.cno }}"readonly></th>
+    <th><input type="email" value="{{ x.email }}"readonly></th>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</head>
+</html>

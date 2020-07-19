@@ -1,0 +1,31 @@
+<html>
+<head>
+</head>
+<body bgcolor="#f5deb3">
+<table>
+    <tr><td  bgcolor="#daa520" style="width: 1400px"><h1><marquee>HR OPERATION MANAGEMENT</marquee></h1></td></tr>
+</table>
+<table>
+    <tr align="center"><td style="width:1400px"><h2 style="color:red">SHORTLIST DETAILS</h2></td></tr>
+</table>
+<table align="center" border="2">
+    <tr>
+        <th>INTERVIEW_ID</th>
+        <th>INTERVIEWER</th>
+        <th>APPLICANTID</th>
+        <th>SCHEDULETIME</th>
+        <th>RESULT</th>
+    </tr>
+    {% for x in data  %}
+        <tr>
+            <th>{{ x.inter_id }}</th>
+            <th> {{ x.interviewer }}</th>
+            <th>{{ x.id }}</th>
+            <th> {{ x.schedule }}</th>
+            <th>Rejected</th>
+        </tr>
+    {% endfor %}
+</table>
+     <h3 align="center"><a href="//" style="text-decoration: none">BACK</a></h3>
+</body>
+</html>

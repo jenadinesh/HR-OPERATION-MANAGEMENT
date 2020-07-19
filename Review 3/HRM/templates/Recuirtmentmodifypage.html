@@ -1,0 +1,21 @@
+<html>
+<head>
+<body>
+<table>
+    <tr><td  bgcolor="#daa520" style="width: 1400px"><h1><marquee>HR OPERATION MANAGEMENT</marquee></h1></td></tr>
+</table>
+<table>
+    <tr><td align="center"  bgcolor="#ffb6c1" style="width: 1400px" height="10"><h3>RECUIRTMENT MODIFYING PAGE</h3></td></tr>
+</table>
+    <form action="/modifyrec/" method="post">
+        {% csrf_token %}
+      <table align="center">
+          <tr><th align="center">Modifying Recuirtment Details</th></tr><br>
+          <tr><th>SELECT OPPERTUNITY CODE</th><th><input type="number" value="{{ x.oppcode }}" name="t1"required></th></tr>
+          <tr><th><input type="submit" value="Getdetails"></th></tr>
+
+      </table>
+</form>
+</body>
+</head>
+</html>

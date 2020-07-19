@@ -1,0 +1,35 @@
+<html>
+<head>
+<body bgcolor="#f5deb3">
+<table>
+    <tr><td  bgcolor="#daa520" style="width: 1400px"><h1><marquee>HR OPERATION MANAGEMENT</marquee></h1></td></tr>
+</table>
+<table>
+    <tr align="center"><td style="width:1400px"><h2 style="color:red">POSTING NEW RECUIRTMENT DETAILS</h2></td></tr>
+</table>
+<form action="">
+<table align="center">
+    <h2 align="center">Adding a new recuirtment details</h2>
+    {% for x in data  %}
+    <tr><td>OPPERTUNITY CODE</td><td><input type="number" value="{{ x.oppcode }}" required></td></tr>
+    <tr><td>QUALIFICATION</td><td><input value="{{ x.qualification }}" required></td></tr>
+    <tr><td>REGISTARTIONS START FROM</td><td><input type="date" value="{{ x.startregistration }}" required></td></tr>
+    <tr><td>AGE LIMIT</td><td><input type="number" value="{{ x.age }}" required></td></tr>
+    <tr><td>LAST DATE TO APPLY</td><td><input type="date" value="{{ x.lastregistration }}" required></td></tr>
+    <tr><td>DEPARTMENT ID</td><td><input type="text" value="{{ x.deptid }}" required></td></tr>
+    <tr><td>NO OF POSITION</td><td><input type="number" value="{{ x.position }}" required></td></tr>
+    <tr><td>DESCRIPTION</td><td><input type="text" value="{{ x.description }}" required></td></tr>
+    <tr><td>RESPONSIBILITIES</td><td><input type="text" value="{{ x.responsibilities }}" required></td></tr>
+    <tr><td>CONTACT NO</td><td><input type="number" value="{{ x.cno }}" required></td></tr>
+    <tr><td></td><td><input type="submit" value="UPDATE" required></td></tr>
+    {% endfor %}
+
+
+
+
+</table>
+</form>
+
+</body>
+</head>
+</html>

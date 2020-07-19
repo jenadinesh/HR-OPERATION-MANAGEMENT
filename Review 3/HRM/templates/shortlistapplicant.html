@@ -1,0 +1,42 @@
+<html>
+<head>
+</head>
+<body bgcolor="#f5deb3">
+<table>
+    <tr><td  bgcolor="#daa520" style="width: 1400px"><h1><marquee>HR OPERATION MANAGEMENT</marquee></h1></td></tr>
+</table>
+<table>
+    <tr align="center"><td style="width:1400px"><h2 style="color:red">SHORTLIST DETAILS</h2></td></tr>
+</table>
+<table align="center" border="2">
+    <tr>
+        <th>APPLICATIONID</th>
+        <th>APPLICATIONNAME</th>
+        <th>QUALIFICATION</th>
+        <th>DATE_OF_BIRTH</th>
+        <th>PERCENTAGE</th>
+        <th>MAILID</th>
+        <th>CONTACT</th>
+        <th>STATUS</th>
+    </tr>
+       {% for x in data  %}
+        {% for y in res %}
+
+        <tr>
+            <th>{{ x.id }}</th>
+            <th> {{ x.name }}</th>
+            <th> {{ x.qualification }}</th>
+            <th> {{ x.dob }}</th>
+            <th> {{ x.percentage}}</th>
+            <th> {{ x.email}}</th>
+            <th>{{ x.mob }}</th>
+
+            <th>{{ y.res }}</th>
+    </tr>
+
+        {% endfor %}
+ {% endfor %}
+
+</table>
+</body>
+</html>

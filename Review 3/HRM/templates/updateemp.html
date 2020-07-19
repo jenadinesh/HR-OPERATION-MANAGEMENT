@@ -1,0 +1,34 @@
+<html>
+<head>
+</head>
+<body bgcolor="#f5deb3">
+<table>
+    <tr><td  bgcolor="#daa520" style="width: 1400px"><h1><marquee>HR OPERATION MANAGEMENT</marquee></h1></td></tr>
+</table>
+<table>
+    <tr align="center"><td style="width:1400px"><h2 style="color:red">UPDATE EMPLOYEE PAGE</h2></td></tr>
+</table>
+<table align="center" border="2">
+    <tr>
+        <th>EMPLOYEEID</th>
+        <th>EMPLOYEENAME</th>
+        <th>DESIGNATION</th>
+        <th>ADDRESS</th>
+        <th>CONTACT</th>
+        <th>EMAIL</th>
+    </tr>
+    {% for x in data  %}
+        <tr>
+            <th> <a href="/editemp/?id={{ x.employeeid }}">
+                {{ x.employeeid }}
+                </a>
+            </th>
+            <th> {{ x.name }}</th>
+            <th> {{ x.designation}}</th>
+            <th> {{ x.address}}</th>
+            <th> {{ x.cno}}</th>
+            <th> {{ x.email}}</th> </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

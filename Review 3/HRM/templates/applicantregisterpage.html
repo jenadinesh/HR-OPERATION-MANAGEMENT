@@ -1,0 +1,32 @@
+<html>
+<head>
+<body bgcolor="#f5deb3">
+<table>
+    <tr><td  bgcolor="#daa520" style="width: 1400px"><h1><marquee>HR OPERATION MANAGEMENT</marquee></h1></td></tr>
+</table>
+<table>
+    <tr align="center"><td style="width:1400px"><h2 style="color:red">REGISTRATION PAGE</h2></td></tr>
+</table>
+<form action="/saveregister/" method="post">
+<table align="center">
+        {% csrf_token %}
+    <h2 align="center">Registration Form</h2>
+    <tr><td>NAME:</td><td><input type="text" name="a1" required></td></tr>
+    <tr><td>DATE OF BIRTH:</td><td><input type="date" name="a2" required></td></tr>
+    <tr><td>EMAIL ID:</td><td><input type="email" name="a3" required></td></tr>
+    <tr><td>GENDER:</td><td><input type="radio" name="a4" checked value="male" required>male
+    <input type="radio" name="a4" value="Female" required>female</td></tr>
+    <tr><td>MOBILE_NO:</td><td><input type="number" name="a5" required></td></tr>
+        <tr><td>ADDRESS:</td><td><input type="text" name="a6" required></td></tr>
+    <tr><td>USERNAME:</td><td><input type="text" name="a7" required></td></tr>
+    <tr><td>PASSWORD:</td><td><input type="text" name="a8" required></td></tr>
+    <tr><td></td><td><input type="submit" value="Register" required></td></tr>
+
+
+
+</table>
+{{ msg }}
+</form>
+</body>
+</head>
+</html>
